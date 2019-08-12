@@ -1,0 +1,91 @@
+body {
+	background-image: url(img/background.jpg);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-attachment: scroll;
+	background-size: cover;
+	font-family: 'Open Sans', sans-serif;
+}
+/*header --> */
+header {
+        max-width: 1086px;
+        margin: 0 auto;
+}
+.top-baner {
+    display: flex;
+}
+    .greeting-message {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 714px;
+        height: 28px;
+        background-color: #1f7cba;
+    }
+        .greeting-message h1 {
+            color:  #ffffff;
+            font-size: 14px;
+            font-weight: 600;
+        }
+            .greeting-message h1 em {
+                font-weight: 700;
+            }
+    .client-panel {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 372px;
+        height: 28px;
+        background-color: #3498db;
+    }
+        .client-panel-list {
+            display: block;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            line-height: 1.2;
+            text-align: right;
+            text-align: center;
+        }
+            .client-panel-list li {
+                display: inline-block;
+                padding: 0 13px;
+            }
+                .client-panel-list li a {
+                    color: #ffffff;
+                }
+.top-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:  #34495e;
+	max-width: 1086px;
+	height: 70px;
+}
+    .top-navigation a {
+        display: block;
+        margin-left: 57px;
+    }
+    .navigation-menu {
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.2;
+        text-align: right;
+        margin-right: 50px;
+    }
+        .navigation-menu li {
+            display: inline-block;
+            
+        }
+
+            .navigation-menu li a {
+                color: #919fae;
+            }
+            .navigation-menu li a:hover {
+                text-decoration: none;
+                color: #ffffff;
+            }
+            .navigation-menu li a.active {
+                color: #ffffff;
+            }
