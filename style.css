@@ -22,14 +22,20 @@ header {
             height: 28px;
             background-color: #1f7cba;
         }
-            .greeting-message h1 {
+            .greeting-message span {
                 color:  #ffffff;
                 font-size: 14px;
                 font-weight: 600;
             }
-                .greeting-message h1 em {
+                .greeting-message span em {
                     font-weight: 700;
                 }
+                    .ful-massage {
+                        display: block;
+                    }
+                    .short-massage {
+                        display: none;
+                    }
         .client-panel {
             display: flex;
             align-items: center;
@@ -48,6 +54,7 @@ header {
                 text-align: center;
             }
                 .client-panel-list li {
+                    text-transform: uppercase;
                     display: inline-block;
                     padding: 0 13px;
                 }
@@ -75,6 +82,7 @@ header {
             margin-right: 50px;
         }
             .navigation-menu li {
+                text-transform: uppercase;
                 display: inline-block;
                 
             }
@@ -106,21 +114,85 @@ header {
 }
 @media screen and (max-width: 960px) {
 header {
-     max-width: 800px;
+     max-width: 768px;
 }
      .greeting-message {
          width: 60%;
     }
-        .greeting-message h1 {
+        .greeting-message span {
             font-size: 13px;
         }
+            .ful-massage {
+                display: none;
+            }
+            .short-massage {
+                display: block;
+            }
     .client-panel {
          width: 40%;
     }
     .top-navigation a {
         margin-left: 25px;
     }
+        .top-navigation a img {
+            max-width: 85%;
+            height: auto;
+        } 
     .navigation-menu {
-        margin-right: 25px;
+        margin-right: 20px;
     }
+}
+@media screen and (max-width: 768px) {
+header {
+     max-width: 600px;
+}
+    .greeting-message {
+         width: 45%;
+    }
+        .greeting-message span {
+            font-size: 11px;
+        }
+    .client-panel {
+         width: 55%;
+    }
+.top-navigation {
+    display: block;
+    position: relative;
+}
+    .top-navigation a {
+        margin-left: 25px;
+    }
+        .top-navigation a img {
+            max-width: 100%;
+            height: auto;
+        } 
+
+    .navigation-menu {
+        position: absolute;
+        right: 0; top: 20px;
+        }
+        .navigation-menu li {
+            display: list-item;
+            min-width: 130px;
+            text-align: left;
+            background-color: #293136;
+            padding: 5px 12px;
+
+        }
+            .navigation-menu li a {
+                margin: 0
+            }
+        /* .navigation-menu {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.2;
+            text-align: right;
+            margin-right: 50px;
+        }
+            .navigation-menu li {
+                text-transform: uppercase;
+                display: inline-block;
+                
+            } */
 }
