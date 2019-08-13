@@ -73,6 +73,14 @@ header {
             display: block;
             margin-left: 57px;
         }
+        .fa-navicon {
+            display: none;
+            color: #919fae;
+            font-size: 25px;
+        }
+            .fa-navicon:hover {
+                color: #ffffff;
+            }
         .navigation-menu {
             display: block;
             font-size: 14px;
@@ -156,43 +164,37 @@ header {
          width: 55%;
     }
 .top-navigation {
-    display: block;
     position: relative;
 }
     .top-navigation a {
-        margin-left: 25px;
+        margin-left: 50px;
     }
-        .top-navigation a img {
-            max-width: 100%;
-            height: auto;
-        } 
-
-    .navigation-menu {
+    .fa-navicon {
         position: absolute;
-        right: 0; top: 20px;
+        display: block;
+        right: 250px;
+    }
+    .navigation-menu {
+        /* display: none; */
+        position: absolute;
+        right: 10px; 
+        top: 20px;
+        z-index: 1;
         }
         .navigation-menu li {
             display: list-item;
-            min-width: 130px;
+            min-width: 150px;
             text-align: left;
             background-color: #293136;
-            padding: 5px 12px;
+            /* padding: 5px 12px; */
 
         }
             .navigation-menu li a {
-                margin: 0
+                margin: 0;
+                padding: 6px 20px;
             }
-        /* .navigation-menu {
-            display: block;
-            font-size: 14px;
-            font-weight: 600;
-            line-height: 1.2;
-            text-align: right;
-            margin-right: 50px;
-        }
-            .navigation-menu li {
-                text-transform: uppercase;
-                display: inline-block;
-                
-            } */
+                .navigation-menu li a:hover {
+                    background-color: #7e8892;
+                }
+
 }
