@@ -155,46 +155,51 @@ header {
      max-width: 600px;
 }
     .greeting-message {
-         width: 45%;
+         display: none;
     }
-        .greeting-message span {
-            font-size: 11px;
-        }
     .client-panel {
-         width: 55%;
+         width: 100%;
     }
-.top-navigation {
-    position: relative;
-}
     .top-navigation a {
-        margin-left: 50px;
+        margin-left: 30px;
     }
-    .fa-navicon {
-        position: absolute;
-        display: block;
-        right: 250px;
+        .top-navigation a img {
+            max-width: 75%;
+        }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        margin-right: 80px;
     }
-    .navigation-menu {
-        /* display: none; */
-        position: absolute;
-        right: 10px; 
-        top: 20px;
-        z-index: 1;
+        .dropdown a {
+            display: inline-block;
         }
-        .navigation-menu li {
-            display: list-item;
-            min-width: 150px;
-            text-align: left;
-            background-color: #293136;
-            /* padding: 5px 12px; */
-
-        }
-            .navigation-menu li a {
-                margin: 0;
-                padding: 6px 20px;
+            .fa-navicon {
+                display: block;
             }
-                .navigation-menu li a:hover {
-                    background-color: #7e8892;
+        .navigation-menu {
+            display: none;
+            position: absolute;
+            left: -65px;
+            z-index: 1;
+        }
+            .navigation-menu li {
+                display: list-item;
+            }
+                .navigation-menu li a {
+                    min-width: 150px;
+                    text-align: left;
+                    background-color: #293136;
+                    margin: 0;
+                    padding: 6px 20px;
+                    transition: 0.3s all;
+                    opacity: 0.8;
                 }
-
+                    .navigation-menu li a:hover {
+                        background-color: #7e8892;
+                        opacity: 1;
+                    }
+        .dropdown:hover .navigation-menu {
+            display: block;
+        }
 }
