@@ -63,3 +63,6 @@ a:active {
 a:hover {
    text-decoration: none;
 }
+img {
+    display: block;
+}

@@ -116,7 +116,6 @@ main {
 /* slider --> */
 .slider-section {
     display: block;
-    /* overflow: hidden; */
 }
 #slider {
     width: 100%;
@@ -230,12 +229,13 @@ label, a {
 	transition: opacity 0.2s ease-out;
 }
 /*slider <-- */
-    .products {
+    .best-seller {
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         height: 320px;
+        background-color: rgba(255, 255, 255, 0.8);
     }
-        .best-seller {
+        .best-seller-left {
             display: flex;
             width: 43%;
             background-image: url(img/Yamaha-FG700S.png);
@@ -244,7 +244,7 @@ label, a {
             background-repeat: no-repeat;
             
         }
-            .best-seller h1 {
+            .best-seller-left h1 {
                 margin-top: 15px;
                 padding: 8px 0;
                 background-color: #3498db;
@@ -258,31 +258,32 @@ label, a {
                 max-height: 24px;
             }
                 .fa-star {
-                    font-size: 18px;
+                    font-size: 20px;
                 }
         .b-s-description {
             width: 57%;
-            background-color: #fff;
         }
             .b-s-wrapper {
                 margin: 0 245px 0 63px;
             }
-                .b-s-name {
+                .b-s-name, .product-name {
                     font-size: 24px;
                     color: black;
                     font-weight: bold;
+                    line-height: 1.2;
                     text-align: left;
-                    margin-top: 20px;
+                    margin-top: 25px;
                     margin-bottom: 0;
                 }
-                    .b-s-name a:hover {
+                    .b-s-name a:hover, .product-name a:hover {
                         text-decoration: none;
                         color: black;
                     }
-                    .b-s-name a {
+                    .b-s-name a, .product-name a {
+                        text-decoration: none;
                         color: black;
                     }
-                .b-s-by em {
+                .b-s-by, .product-by em {
                     font-size: 14px;
                     font-weight: 400;
                     color: #3498db;
@@ -299,28 +300,284 @@ label, a {
                     .b-s-cost span {
                         font-size: 28px;
                     }
-                .b-s-wrapper a span {
-                    text-transform: uppercase;
+                .a-button {
+                    display: block;
+                    width: 100%;
                     margin-bottom: 15px;
                     padding-bottom: 15px; 
                     padding-top: 15px;
                     outline: 3px solid #3498db;
                     color:  #3498db;
-                    font-size: 18px;
-                    font-weight: 700;
                     text-align: center;
                 }
+                    .a-button span {
+                        text-transform: uppercase;
+                        font-size: 18px;
+                        font-weight: 800;
+                        letter-spacing: 2px;
+                    }
+                /* rating star widget --> */
+                
+                .rating-caption {
+                    position: absolute;
+                    padding: 0;
+                    margin-top: 20px;
+                }
+                /* Group */
+        
+                .rating-group {
+                    /* margin-top: 10px; */
+                    position: relative;
+                    width: 90px;
+                    height: 18px;
+                    background-image: url(img/star-solid-off.svg);
+                    background-size: 18px auto;
+                    background-repeat: repeat-x;
+                }
+        
+                .rating-group:focus-within {
+                    outline: 0.1em solid #4a90e2;
+                    outline-offset: 0.1em;
+                }
+                /* star */
+                .rating-star {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    margin: 0;
+                    height: 18px;
+                    font-size: inherit;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    background-size: 18px auto;
+                    background-repeat: repeat-x;
+                }
+        
+                .rating-star:focus {
+                    outline: none;
+                }
+        
+                .rating-star:hover,
+                .rating-star:checked {
+                    background-image: url(img/star-solid-on.svg);
+                }
+        
+                .rating-star:hover ~ .rating-star {
+                    background-image: url(img/star-solid-off.svg);
+                }
+                /* Options */
+                .rating-star:nth-of-type(1) {
+                    z-index: 5;
+                    width: 18px;
+                }
+                .rating-star:nth-of-type(2) {
+                    z-index: 4;
+                    width: 36px;
+                }       
+                .rating-star:nth-of-type(3) {
+                    z-index: 3;
+                    width: 54px;
+                }
+                .rating-star:nth-of-type(4) {
+                    z-index: 2;
+                    width: 72px;
+                }
+                .rating-star:nth-of-type(5) {
+                    z-index: 1;
+                    width: 90px;
+                }
+                /* <-- rating star widget */
 
-
-        /* <section class="b-s-description">
-                <div class="b-s-wrapper">
-                    <p class="b-s-name"><a href="#">Yamaha FG700S</a></p>
-                    <p class="b-s-by"><em>by Yamaha Gutar</em></p>
-                    <p class="b-s-cost">IDR 2.000<span>.000</span></p>
-                    <a href="#">add to cart</a>  
-                </div>      
-            </section>*/
-
+    .products {
+        display: flex;
+        width: 100%;
+        height: 405px;
+        justify-content: space-between;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+        .product-item {
+            position: relative;
+            display: block;
+            width: 342px;
+            overflow: hidden;
+        }
+            .p-i-1 {
+                background-image: url(img/Yamaha-FG375S.png);
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .p-i-2 {
+                background-image: url(img/Yamaha-S30077.png);
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .p-i-3 {
+                background-image: url(img/Yamaha-FG-312.png);
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .products-sale {
+                text-transform: uppercase;
+                position: absolute;
+                right: -35px;
+                margin-top: 17px;
+                padding-top: 4.5px;
+                width: 140px;
+                height: 35px;
+                background-color: #3498db;
+                color:  white;
+                font-size: 24px;
+                text-align: center;
+                font-weight: 700;
+                transform: rotate(45deg);
+            }
+            .product-item-wrap {
+                width: 270px;
+                margin: 215px 0 0 32px;
+            }
+                .product-cost {
+                    margin-top: 20px;
+                    margin-bottom: 15px;
+                    font-size: 24px;
+                    line-height: 1.2;
+                    font-weight: 700;
+                    color: black;
+                    text-align: left;
+                }
+                    .product-cost span {
+                        font-size: 18px;
+                    }
+                .product-button {
+                    display: block;
+                    width: 100%;
+                    padding-bottom: 10px; 
+                    padding-top: 10px;
+                    outline: 2.5px solid #3498db;
+                    color:  #3498db;
+                    text-align: center;
+                }
+                    .product-button span {
+                        text-transform: uppercase;
+                        font-size: 15px;
+                        font-weight: 800;
+                        line-height: 1.2;
+                        letter-spacing: 1.5px;
+                    }
+    .banner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 460px;
+        background-color: rgba(255, 255, 255, 0.8);
+        background-image: url(img/bottom-banner.jpg);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 0;
+    }
+        .banner-button {
+                display: block;
+                text-transform: uppercase;
+                border: 6px solid #fff;
+                color: #fff;
+                padding: 15px 45px;
+                text-align: center;
+                font-size: 30px;
+                font-weight: 800;
+            }
+            .banner-button:hover {
+               text-decoration: none;
+               color: #fff;
+            }
+    footer {
+        max-width: 1086px;
+        margin: 0 auto;
+    }
+        .footer-menu {
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 92px;
+            background-color: #34495e;
+            font-size: 14px;
+            font-weight: 700;
+        }
+            .footer-menu li {
+                margin-right: 35px;
+            }
+                .footer-menu li a {
+                    color: #fff;
+                }
+                .footer-menu li a:hover {
+                    text-decoration: none;
+                    color: #fff;
+                }
+        .copyright {  
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 40px;
+            background-color: #1f7cba;
+        }
+            .copyright span {
+                margin: 0 63px;
+                color: #fff;
+                font-size: 14px;
+                line-height: 1.2;
+                font-weight: 400;
+            }
+        .bot-media-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 62px;
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+            .bot-media-links ul li {
+                display: inline-block;
+            }
+                .fa-twitter {
+                    padding: 3px 4.5px;
+                    margin-left: 20px;
+                    border: 3px solid;
+                }
+                .fa-tumblr {
+                    padding: 3px 7px;
+                    margin-left: 20px;
+                    border: 3px solid;
+                }
+                .fa-facebook {
+                    padding: 3px 7px;
+                    border: 3px solid;
+                }
+                .a-fa-facebook a {
+                    color: #536ea5;
+                }
+                .a-fa-facebook a:hover {
+                text-decoration: none;
+                color: #536ea5;
+                }
+                .a-fa-tumblr a {
+                    color: #3d5c70;
+                }
+                .a-fa-tumblr a:hover {
+                text-decoration: none;
+                color: #3d5c70;
+                }
+                .a-fa-twitter a {
+                    color: #48cee9;
+                }
+                .a-fa-twitter a:hover {
+                text-decoration: none;
+                color: #48cee9;
+                }
 /*main <-- */
 @media screen and (max-width: 1080px) {
     /*header --> */
@@ -361,6 +618,55 @@ main {
         width: 50px;
     }
     /*slider <-- */
+    .best-seller {
+        height: 320px;
+    }
+        .b-s-wrapper {
+            margin: 0 245px 0 63px;
+        }
+            .b-s-cost {
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    font-size: 35px;
+                }
+                    .b-s-cost span {
+                        font-size: 24px;
+                    }
+                .a-button {
+                    padding-bottom: 12px; 
+                    padding-top: 12px;
+                }
+    .products {
+        height: 350px;
+    }
+        .product-item {
+            width: 300px;
+
+        }
+            .product-item-wrap {
+                width: 200px;
+                margin: 160px 0 0 32px;
+            }
+                .product-name {
+                    font-size: 20px;
+                }
+                .product-by {
+                    font-size: 9px;
+                }
+                .product-cost {
+                    margin-top: 18px;
+                }
+                    .product-cost span {
+                        font-size: 16px;
+                    }
+    .banner {
+        height: 406px;
+    }
+    footer {
+        max-width: 960px;
+    }
+    
+
 }
 @media screen and (max-width: 960px) {
     /*header --> */
@@ -396,9 +702,55 @@ header {
 main {
     max-width: 768px;
 }
-    /* slider --> */
-
-    /*slider <-- */
+    .best-seller {
+        height: 320px;
+    }
+        .best-seller-left h1 {
+            font-size: 20px;
+        }
+            .best-seller-left h1 i {
+                font-size: 18px;
+            } 
+        .b-s-wrapper {
+            margin: 0 150px 0 63px;
+        }
+    .products {
+        height: 290px;
+    }
+        .product-item {
+            width: 250px;
+        }
+            .product-item-wrap {
+                width: 180px;
+                margin: 135px 0 0 32px;
+            }
+                .product-name {
+                    font-size: 20px;
+                }
+                .product-by {
+                    font-size: 9px;
+                }
+                .product-cost {
+                    margin-top: 18px;
+                }
+                    .product-cost span {
+                        font-size: 16px;
+                    }
+                .product-button {
+                    padding: 6px;
+                }
+    .banner {
+        height: 327px;
+    }
+    footer {
+        max-width: 768px;
+    }
+    .footer-menu {
+        font-size: 12px;
+    }
+        .copyright span {
+            font-size: 12px;
+        }
     
 }
 @media screen and (max-width: 768px) {
@@ -482,6 +834,68 @@ main {
         width: 40px;
     }
     /*slider <-- */
+    .b-s-wrapper {
+        margin: 0 50px 0 63px;
+    }
+        .b-s-cost {
+            font-size: 24px;
+        }
+            .b-s-cost span {
+                font-size: 16px;
+            }
+    .products {
+        justify-content: space-between;
+        height: 340px;
+    }
+        .p-i-3 {
+            display: none;
+        }
+        .product-item {
+            width: 290px;
+        }
+            .product-item-wrap {
+                width: 200px;
+                margin: 160px 0 0 32px;
+            }
+                .product-name {
+                    font-size: 20px;
+                }
+                .product-by {
+                    font-size: 9px;
+                }
+                .product-cost {
+                    margin-top: 18px;
+                }
+                    .product-cost span {
+                        font-size: 16px;
+                    }
+    .banner {
+        height: 256px;
+    }
+        .banner a {
+            font-size: 24px;
+        }
+    footer {
+        max-width: 600px;
+    }
+        .footer-menu {
+            padding-top: 10px;
+            text-align: center;
+            display: list-item;
+        }
+            .footer-menu li {
+                padding-bottom: 5px;
+            }
+        .copyright {
+            justify-content: center;
+        }
+            .copyright span {
+                margin: 0;
+            }
+            .created-by {
+                display: none;
+            }
+
 }
 @media screen and (max-width: 460px) {
     /*header --> */
