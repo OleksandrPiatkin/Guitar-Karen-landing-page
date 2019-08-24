@@ -885,6 +885,7 @@ main {
         }
             .footer-menu li {
                 padding-bottom: 5px;
+                margin: 0;
             }
         .copyright {
             justify-content: center;
@@ -1190,6 +1191,4 @@ footer {
         .created-by {
             display: none;
         }
-}
-
 }
